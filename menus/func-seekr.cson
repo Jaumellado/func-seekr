@@ -3,7 +3,7 @@
   'atom-text-editor': [
     {
       'label': 'Toggle func-seekr'
-      'command': 'func-seekr:toggle'
+      'command': 'func-seekr:openSeekr'
     }
   ]
 'menu': [
@@ -13,8 +13,8 @@
       'label': 'func-seekr'
       'submenu': [
         {
-          'label': 'Toggle'
-          'command': 'func-seekr:toggle'
+          'label': 'Search'
+          'command': 'func-seekr:openSeekr'
         }
       ]
     ]
