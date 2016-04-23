@@ -7,9 +7,14 @@ class FuncSeekrView
 
     # Create message element
     message = document.createElement('div')
-    message.textContent = "The FuncSeekr package is Alive! It's ALIVE!"
+    message.textContent = "Type your search:"
     message.classList.add('message')
     @element.appendChild(message)
+
+    searchBar = document.createElement('form')
+    inputText = document.createElement('input')
+    searchBar.appendChild(inputText)
+    @element.appendChild(searchBar)
 
   # Returns an object that can be retrieved when package is activated
   serialize: ->
