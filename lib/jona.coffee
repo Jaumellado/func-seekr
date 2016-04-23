@@ -1,6 +1,14 @@
 request = require 'request'
 json = require 'JSON'
 
+
+#editor = atom.workspace.getActivePaneItem()
+#file = editor?.buffer?.file
+#filename = file?.getBaseName()
+#filename = filename.split('.')
+#fileExtension = filename[filename.length-1])
+
+
 resp = ""
 request.get {
   uri:'https://api.github.com/gists/public?client_id=79cbac24f101f20ebe89&client_secret=bf5e196e52ce682e0e6b66371911941c00ba15dc',
