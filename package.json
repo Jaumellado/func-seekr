@@ -5,7 +5,7 @@
   "description": "A short description of your package",
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "func-seekr:openSeekr"
+    "atom-workspace": "func-seekr:search"
   },
   "repository": "https://github.com/atom/func-seekr",
   "license": "MIT",
