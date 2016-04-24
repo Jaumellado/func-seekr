@@ -4,9 +4,11 @@ request = require 'request'
 
 module.exports = FuncSeekr =
   FuncSeekrView: null
+  WebBrowserView: null
   modalPanel: null
   subscriptions: null
   thisExtension: null
+  newPage: "chrome://newtab"
 
   activate: (state) ->
     @subscriptions = new CompositeDisposable
@@ -30,8 +32,12 @@ module.exports = FuncSeekr =
       for key, value of data
         files = value['files']
         #console.log "#{key} and #{value['url']}"
-        for key of files
-          gists.push(key)
+        for key, value of files
+          item = {
+            filename: value['filename'],
+            url: value['raw_url']
+          }
+          gists.push(item)
           #fileName = key.split('.')
           #if fileName.length > 1
             #extension = fileName[fileName.length-1]
