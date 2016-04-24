@@ -5,6 +5,9 @@ class FuncSeekrView extends SelectListView
     @self = self
     super
 
+  setPanel: (@panel) ->
+    console.log("Setting panel")
+
   viewForItem: (item) ->
     "<li>#{item.replace(/\/\/(.*?)\//, "// <big>$1</big> /")}</li>"
 
@@ -12,4 +15,4 @@ class FuncSeekrView extends SelectListView
     console.log("#{item} was selected")
 
   cancelled: ->
-    @self.panelHide()
+    @panel.hide()

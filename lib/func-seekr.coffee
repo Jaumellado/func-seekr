@@ -41,6 +41,7 @@ module.exports = FuncSeekr =
       @FuncSeekrView = new FuncSeekrView(this)
       @modalPanel ?= atom.workspace.addModalPanel(item: @FuncSeekrView)
       @modalPanel.show()
+      @FuncSeekrView.setPanel(@modalPanel)
       @FuncSeekrView.focusFilterEditor()
       @FuncSeekrView.setItems gists
 
