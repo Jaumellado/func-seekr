@@ -1,5 +1,9 @@
 # func-seekr package
 
-A short description of your package.
+A useful atom package for developers that reuses Gist code easily.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+It consults all public Gists and lets you filter them so you can look for any function you want written in any language.
+
+To toggle: ctrl + alt + o
+
+For developing this tool we used the latest version of the AtomAPI 1.0, including atom-space-pen-views classes.
