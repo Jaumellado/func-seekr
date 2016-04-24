@@ -6,15 +6,18 @@ class FuncSeekrView extends SelectListView
     @self = self
     super
 
+  setFilterKey: (@filterKey) ->
+    console.log("setting filterKey")
+    console.log "#{@filterKey}"
+
+  getFilterKey: ->
+    return @filterKey
+
   setPanel: (@panel) ->
     console.log("Setting panel")
 
   viewForItem: (item) ->
-    #"<li>#{item.replace(/\/\/(.*?)\//, "// <big>$1</big> /")}</li>"
-    "<li class='two-lines'>
-      <div class='primary-line'>#{item.filename}</div>
-      <div class='secondary-line'>#{item.url}</div>
-    </li>"
+    "<li>#{item.filename.replace(/\/\/(.*?)\//, "// <big>$1</big> /")}</li>"
 
   confirmed: (item) ->
     @panel.hide()

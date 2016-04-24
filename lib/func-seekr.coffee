@@ -48,6 +48,7 @@ module.exports = FuncSeekr =
       @modalPanel ?= atom.workspace.addModalPanel(item: @FuncSeekrView)
       @modalPanel.show()
       @FuncSeekrView.setPanel(@modalPanel)
+      @FuncSeekrView.setFilterKey('filename')
       @FuncSeekrView.focusFilterEditor()
       @FuncSeekrView.setItems gists
 
